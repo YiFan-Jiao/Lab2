@@ -37,6 +37,7 @@ for (int i = 0;i < charString2.Length; i++)
         if (charString2[i] == charString2[j])
         {
             notOnlyPlus = true;
+            break;
         }
     }
 
@@ -45,6 +46,7 @@ for (int i = 0;i < charString2.Length; i++)
         if (charString2[i] == charString2[j])
         {
             notOnlyMinus = true;
+            break;
         }
     }
 
@@ -56,4 +58,16 @@ for (int i = 0;i < charString2.Length; i++)
 Console.WriteLine();
 
 //question 3
-xxxx
+Console.WriteLine("question 3");
+StringBuilder stringBuilder3 = new StringBuilder();
+Console.WriteLine("Enter a string:");
+string inputString = Console.ReadLine();
+char[] charArray = inputString.ToCharArray();
+
+for (int i = charArray.Length - 1; i >= 0; i--)
+{
+    //Console.WriteLine(charArray[i]);
+    stringBuilder3.Append(charArray[i]);
+}
+Console.WriteLine(stringBuilder3);
+Console.WriteLine();
