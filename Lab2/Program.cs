@@ -71,3 +71,38 @@ for (int i = charArray.Length - 1; i >= 0; i--)
 }
 Console.WriteLine(stringBuilder3);
 Console.WriteLine();
+
+//question 4
+Console.WriteLine("question 4");
+string string4 = "Tiptoe through the tulips";
+string[] charString4 = string4.Split(' ');
+for (int i = 0; i < charString4.Length; i++)
+{
+    for (int j = 0; j < charString4.Length - 1; j++)
+    {
+        if (charString4[j].Length < charString4[j + 1].Length)
+        {
+            string stored = charString4[j];
+            charString4[j] = charString4[j + 1];
+            charString4[j + 1] = stored;
+        }
+    }
+}
+
+for (int i = 0;i < charString4.Length; i++)
+{
+    if (charString4[i].Length == charString4[0].Length && charString4[i + 1].Length != charString4[0].Length)
+    {
+        Console.WriteLine(charString4[i]);
+    }
+}
+Console.WriteLine();
+
+//StringBuilder and string
+Console.WriteLine("Advantages and disadvantages of StringBuilder and string:");
+Console.WriteLine("\nStringBuilder can change the value during use. But you can't " +
+    "directly assign a string of strings when you create it. You need to use the " +
+    "stringBuilder.Append() method to add content, and there are some string methods " +
+    "that stringBuilder cannot use, such as Contains, Join, etc.");
+Console.WriteLine("\nThe string can be directly assigned when it is created, but the content " +
+    "cannot be changed, and methods such as Contains and Join can be used.");
