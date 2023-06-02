@@ -56,4 +56,4 @@ for (int i = 0;i < charString2.Length; i++)
 Console.WriteLine();
 
 //question 3
-
+xxxx
